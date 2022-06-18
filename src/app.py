@@ -7,7 +7,8 @@ app = Flask(__name__)
 def index():
     return 'Hello!'
 
-@app.route('/sum/<int:a0>/<int:b>')
-def sum(a: int,b: int):
-    return a+b
+@app.route('/sum/<int:a>/<int:b>')
+def sum(a: int, b: int):
+    sum_nums = a + b
+    return f"La suma es: {str(sum_nums)}"
 
