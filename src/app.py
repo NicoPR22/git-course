@@ -17,3 +17,7 @@ def sum(a: int, b: int):
     sum_nums = a + b
     return f"La suma es: {str(sum_nums)}"
 
+@app.route('/mult/<int:a>/<int:b>')
+def mult(a: int, b: int):
+    result = float( a * b)
+    return f"La multiplicacion es: {str(result)}"
