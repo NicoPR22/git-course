@@ -1,5 +1,6 @@
 from asyncio import run_coroutine_threadsafe
 from unicodedata import name
+from unittest import result
 from flask import Flask
 app = Flask(__name__)
 
@@ -14,8 +15,8 @@ def greating():
 
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a: int, b: int):
-    sum_nums = a + b
-    return f"La suma es: {str(sum_nums)}"
+    result = float(a * b)
+    return result
 
 @app.route('/mult/<int:a>/<int:b>')
 def mult(a: int, b: int):
